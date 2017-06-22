@@ -687,4 +687,4 @@ Public License instead of this License.  But first, please read
 ------------------------------------------
 ## 3. Github Page Link
 SlidingPuzzle Github Page Link is here.
-<https://github.com/sg201324423/slidiingPuzzle>
+<https://github.com/sg201324423/sg201324423.github.com>
