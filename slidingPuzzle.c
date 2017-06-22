@@ -50,7 +50,7 @@ bool checkPuzzle() {
 void printPuzzle() {
 	int i, j, k;
 	int puzzle_content;
-	system("cls");
+	system("clear");
 
 
 	for (i = 0; i<4; i++) {
@@ -152,7 +152,8 @@ int main() {
 	initializePuzzle();
 	printPuzzle();
 	while (!checkPuzzle())   controlPuzzle();
-	printf("bye!");
+	printPuzzle();
+	printf("Bye!\n");
 	return 0;
 }
 
