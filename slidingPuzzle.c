@@ -1,3 +1,16 @@
+/**
+* @file main.c
+* @author Seulgi Kim <sgkim5955@gmail.com>
+* @date 2017/6/22
+* @version 1.0
+* @brief The time class represents a moment of time.
+*
+* @section LICENSE
+*
+* This program is free software, anybody can redistribute freely.
+**/
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -5,12 +18,18 @@
 #include <math.h>
 #define MAX 4
 
+
 unsigned int coord_x = 0;
 unsigned int coord_y = 0;
 int slidingPuzzle[MAX][MAX];
 bool isExisted[16] = { false, };
 bool isSelected = false;
 
+
+/**
+* Initailize 4*4 puzzle board using random function.
+* There isn't no duplicated number and numbers from 1 to 15.
+**/
 
 void initializePuzzle() {
 
@@ -34,6 +53,13 @@ void initializePuzzle() {
 
 }
 
+
+/**
+* Check if the puzzle board is completed.
+* If numbers are assending ordered, board is completed and return true.
+* Unless, board isn't completed and return false, then continue game.
+**/
+
 bool checkPuzzle() {
 	int i, j;
 	for (i = 0; i<4; i++) {
@@ -46,6 +72,11 @@ bool checkPuzzle() {
 	return true;
 
 }
+
+
+/**
+*Print out current puzzle board.
+**/
 
 void printPuzzle() {
 	int i, j, k;
@@ -64,6 +95,12 @@ void printPuzzle() {
 		printf("\n");
 	}
 }
+
+
+/**
+*Check which piece of puzzle is next to blank(#).
+*And if user inputs puzzle number, change current puzzle board using swap.
+**/
 
 void controlPuzzle() {
 
@@ -148,6 +185,11 @@ void controlPuzzle() {
 	}
 
 }
+
+/**
+*This is main function of slidingPuzzle
+**/
+
 int main() {
 	initializePuzzle();
 	printPuzzle();
